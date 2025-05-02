@@ -1,139 +1,156 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Barbearia Moderna</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #111;
-      color: white;
+      font-family: 'Arial', sans-serif;
+      background-color: #000;
+      color: #fff;
     }
+
     header {
-      background: linear-gradient(90deg, #000, #1db954);
-      padding: 30px;
-      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #111;
+      padding: 20px;
+      flex-wrap: wrap;
     }
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
+
+    header img {
+      height: 60px;
     }
-    nav {
-      text-align: center;
-      background: #222;
-      padding: 10px 0;
+
+    .btns-header {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
     }
-    nav a {
-      color: #1db954;
+
+    .btns-header a {
+      background: gold;
+      color: black;
+      padding: 10px 20px;
       text-decoration: none;
-      margin: 0 15px;
+      border-radius: 5px;
       font-weight: bold;
+      transition: 0.3s;
     }
-    section {
+
+    .btns-header a:hover {
+      background: #ffd700cc;
+    }
+
+    .section {
       padding: 40px 20px;
       text-align: center;
     }
-    .servicos, .galeria {
+
+    h2 {
+      color: gold;
+      margin-bottom: 10px;
+    }
+
+    p {
+      max-width: 600px;
+      margin: auto;
+      font-size: 18px;
+    }
+
+    .carousel {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      overflow-x: auto;
       gap: 20px;
+      padding: 20px 0;
+      scroll-behavior: smooth;
     }
-    .card {
-      background: #1a1a1a;
+
+    .carousel img, .review {
+      min-width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(255, 215, 0, 0.2);
+      background-color: #1a1a1a;
+    }
+
+    .carousel img {
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .review {
       padding: 20px;
-      border-radius: 10px;
-      width: 250px;
+      text-align: left;
+      color: #fff;
     }
-    .card img {
-      width: 100%;
-      border-radius: 10px;
-    }
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 10px 20px;
-      background: #1db954;
-      color: #000;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+
     footer {
+      background-color: #111;
       text-align: center;
       padding: 20px;
-      background: #111;
+      font-size: 14px;
       border-top: 1px solid #333;
-      color: #aaa;
+    }
+
+    .carousel::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    .carousel::-webkit-scrollbar-thumb {
+      background: gold;
+      border-radius: 5px;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Barbearia Moderna</h1>
-  <p>Estilo, atitude e excelência em cada corte</p>
-</header>
-
-<nav>
-  <a href="#sobre">Sobre</a>
-  <a href="#servicos">Serviços</a>
-  <a href="#galeria">Galeria</a>
-  <a href="#contato">Contato</a>
-</nav>
-
-<section id="sobre">
-  <h2>Sobre Nós</h2>
-  <p>Somos a barbearia que entende o estilo do homem moderno. Profissionalismo, ambiente top e atendimento de respeito.</p>
-</section>
-
-<section id="servicos">
-  <h2>Serviços</h2>
-  <div class="servicos">
-    <div class="card">
-      <h3>Corte Masculino</h3>
-      <p>Do clássico ao degradê moderno</p>
-      <strong>R$ 25,00</strong>
+  <!-- Cabeçalho -->
+  <header>
+    <img src="./GOLDEN-HOUR-logo.png" alt="Logo Barbearia Moderna">
+    <div class="btns-header">
+      <a href="https://www.instagram.com/seuusuario" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+      <a href="https://wa.me/5588999999999" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
     </div>
-    <div class="card">
-      <h3>Barba</h3>
-      <p>Alinhamento, navalha e relax</p>
-      <strong>R$ 15,00</strong>
-    </div>
-    <div class="card">
-      <h3>Pacote Corte + Barba</h3>
-      <p>Combo completo</p>
-      <strong>R$ 35,00</strong>
-    </div>
-  </div>
-</section>
+  </header>
 
-<section id="galeria">
-  <h2>Galeria</h2>
-  <div class="galeria">
-    <div class="card">
-      <img src="https://via.placeholder.com/250x150" alt="Corte 1">
-      <p>Degradê alto com risco</p>
-    </div>
-    <div class="card">
-      <img src="https://via.placeholder.com/250x150" alt="Corte 2">
-      <p>Barba alinhada na navalha</p>
-    </div>
-  </div>
-</section>
+  <!-- Introdução -->
+  <section class="section">
+    <h2>Seu estilo em mãos profissionais</h2>
+    <p>Na Barbearia Moderna, oferecemos mais do que cortes — entregamos uma experiência completa com estilo, qualidade e personalidade.</p>
+  </section>
 
-<section id="contato">
-  <h2>Contato</h2>
-  <p>Agende seu horário agora mesmo</p>
-  <a class="btn" href="https://wa.me/5599999999999" target="_blank">Chamar no WhatsApp</a><br><br>
-  <a class="btn" href="https://instagram.com/seuinstagram" target="_blank">Instagram</a>
-</section>
+  <!-- Galeria -->
+  <section class="section">
+    <h2>Galeria de Cortes</h2>
+    <div class="carousel">
+      <img src="./IMG_2245.jpeg" alt="Corte 1">
+      <img src="./IMG_6122.png" alt="Corte 2">
+      <img src="./IMG_6158.jpeg" alt="Corte 3">
+      <img src="./image.jpg" alt="Corte 4">
+      <img src="./Limpeza-de-pele.png" alt="Corte 5">
+    </div>
+  </section>
 
-<footer>
-  © 2025 Barbearia Moderna. Todos os direitos reservados.
-</footer>
+  <!-- Avaliações -->
+  <section class="section">
+    <h2>O que dizem nossos clientes</h2>
+    <div class="carousel">
+      <div class="review"><strong>Lucas M.</strong><br>“Corte top, atendimento melhor ainda!”</div>
+      <div class="review"><strong>Rafaela P.</strong><br>“Ambiente organizado e profissionais excelentes.”</div>
+      <div class="review"><strong>João V.</strong><br>“Melhor corte que já fiz, recomendo demais!”</div>
+      <div class="review"><strong>Marcelo T.</strong><br>“Preço justo e qualidade alta.”</div>
+      <div class="review"><strong>Bruno C.</strong><br>“Fui indicado e agora sou cliente fiel.”</div>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    © 2025 Barbearia Moderna - Todos os direitos reservados
+  </footer>
 
 </body>
 </html>
